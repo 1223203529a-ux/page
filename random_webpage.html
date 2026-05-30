@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>随机生成网页</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; }
+header { padding: 40px; text-align: center; background: #222; color: white; }
+main { max-width: 900px; margin: 30px auto; padding: 20px; }
+.card { background: white; padding: 20px; border-radius: 12px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+button { padding: 10px 16px; border: none; border-radius: 8px; cursor: pointer; }
+</style>
+</head>
+<body>
+<header>
+<h1>✨ 随机生成的网页</h1>
+<p>欢迎来到一个临时诞生的小角落</p>
+</header>
+<main>
+<div class="card">
+<h2>今日灵感</h2>
+<p>把好奇心当作指南针，把实践当作地图。</p>
+</div>
+<div class="card">
+<h2>随机数字</h2>
+<p id="num"></p>
+<button onclick="location.reload()">再随机一次</button>
+</div>
+</main>
+<script>
+document.getElementById('num').textContent =
+'幸运数字：' + Math.floor(Math.random()*1000);
+</script>
+</body>
+</html>
